@@ -1,0 +1,109 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bdb19b;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote_div {
+  width: 70%;
+  height: 90%;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("bgwallpaper.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.quote_text {
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+  line-height: 30px;
+  padding: 0 20%;
+  color: grey;
+  font-family: "Questrial", sans-serif;
+  text-align: center;
+}
+
+.quote_author {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+  margin-top: 70px;
+  color: #5161ce;
+  font-family: "Questrial", sans-serif;
+  text-align: center;
+}
+
+.new_quote {
+  width: 70%;
+  height: 42px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+  border: none;
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "notica text", sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 940px) {
+  .quote_div {
+    width: 100%;
+    height: 100%;
+  }
+  .new_quote {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .quote_div {
+    padding-top: 230px;
+  }
+  .quote_text {
+    line-height: 20px;
+    font-size: 16px;
+  }
+  .quote_author {
+    font-size: 15px;
+    margin-top: 40px;
+  }
+  .new_quote {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .quote_div {
+    padding-top: 110px;
+    width: 355px;
+    height: 310px;
+  }
+  .new_quote {
+    width: 355px;
+  }
+  .quote_text{
+    padding: 0px 12%;
+  }
+}
