@@ -1,6 +1,6 @@
 const api = "https://type.fit/api/quotes";
-let text = document.getElementsByClassName("quote_text")[0];
-let author = document.getElementsByClassName("quote_author")[0];
+let text = document.getElementsByClassName("text")[0];
+let author = document.getElementsByClassName("author")[0];
 let AllQuote = "";
 
 function newQuote(){
