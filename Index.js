@@ -1,19 +1,24 @@
-const api = "https://type.fit/api/quotes";
-let text = document.getElementsByClassName("text")[0];
-let author = document.getElementsByClassName("author")[0];
-let AllQuote = "";
+const api = "https://api.api-ninjas.com/v1/quotes";
+let text = document.getElementsByClassName("quote_text")[0];
+let author = document.getElementsByClassName("quote_author")[0];
+let AllQuote;
 
 function newQuote(){
-    const rand = Math.floor(Math.random() * 1643);
-    if(AllQuote[rand].author == null) author.innerText = `- Author Unknown -`;
-    else author.innerText = `- ${AllQuote[rand].author} -`;
-    text.innerText = `"${AllQuote[rand].text}"`;
+    if(AllQuote.author == null) author.innerText = `- Author Unknown -`;
+    else author.innerText = `- ${AllQuote.author} -`;
+    text.innerText = `"${AllQuote.quote}"`;
 }
 
 const ranQuote = async () => {
     try{
-        let data = await fetch(api);
-        AllQuote = await data.json();
+        let response = await fetch(api, {
+            headers: { 
+                'X-Api-Key': 'and/0Dxbn0hzpLLNd2XWRw==rpJbDnbc8coVrXSM',
+                'Content-Type': 'application/json'
+            }
+        });
+        AllQuote = await response.json();
+        AllQuote = AllQuote[0];
         newQuote();
     }
     catch(err){
@@ -22,3 +27,10 @@ const ranQuote = async () => {
 }
 
 ranQuote();
+
+// API
+// {
+//     quote: "",
+//     author: "",
+//     category: ""
+// }
