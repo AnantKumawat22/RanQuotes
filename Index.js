@@ -4,8 +4,18 @@ let author = document.getElementsByClassName("quote_author")[0];
 let AllQuote;
 
 function newQuote(){
+
+    // No Quote
+    if(AllQuote.quote == null) ranQuote();
+
+    // No Author
     if(AllQuote.author == null) author.innerText = `- Author Unknown -`;
     else author.innerText = `- ${AllQuote.author} -`;
+
+    // If quote characters are more than 170 then it will not show till there.
+    if(AllQuote.quote.length > 170){
+        AllQuote = AllQuote.substring(0, 171).concat("...");
+    }
     text.innerText = `"${AllQuote.quote}"`;
 }
 

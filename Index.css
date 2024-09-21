@@ -83,7 +83,7 @@ body {
   }
   .quote_text {
     line-height: 20px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .quote_author {
     font-size: 15px;
@@ -96,7 +96,7 @@ body {
 
 @media (max-width: 640px) {
   .quote_div {
-    padding-top: 110px;
+    padding-top: 80px;
     width: 355px;
     height: 310px;
   }
